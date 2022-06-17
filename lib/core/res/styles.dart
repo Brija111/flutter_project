@@ -9,7 +9,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppStyle {
 
-  static const String fontFamily = "Manrope";
+  static const String fontFamily = "DMSans";
 
   static final ThemeData appTheme = ThemeData(
     primaryColor: AppColor.primary,
@@ -68,150 +68,151 @@ class AppTextStyle {
 
   static  TextStyle h1HeadingLarge = TextStyle(
       fontSize: AppFontSize.dp96.sp,letterSpacing: -1.5,
-      fontWeight: FontWeight.w500,height: 112.03.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
 
   static  TextStyle h2Heading = TextStyle(
       fontSize: AppFontSize.dp60.sp,letterSpacing: -0.5,
-      fontWeight: FontWeight.w500,height: 72.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle h3Heading = TextStyle(
       fontSize: AppFontSize.dp48.sp,letterSpacing: 0,
-      fontWeight: FontWeight.w500,height: 56.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
 
   static  TextStyle h4Heading = TextStyle(
       fontSize: AppFontSize.dp34.sp,letterSpacing: 0.25,
-      fontWeight: FontWeight.w500,height: 42.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
+
   static  TextStyle h5Heading = TextStyle(
-      fontSize: AppFontSize.dp24.sp,letterSpacing: 0,
-      fontWeight: FontWeight.w500,height: 32.02.sp,
+      fontSize: AppFontSize.dp24.sp,letterSpacing: 0.15,    //Title
+      fontWeight: FontWeight.w600,
       color: AppColor.textOnPrimary
   );
   static  TextStyle h6Heading = TextStyle(
       fontSize: AppFontSize.dp20.sp,letterSpacing: 0.15,
-      fontWeight: FontWeight.w500,height: 32.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
 
   static  TextStyle body1 = TextStyle(
       fontSize: AppFontSize.dp16.sp,letterSpacing: 0.15,
-      fontWeight: FontWeight.w400,height: 24.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
 
   static  TextStyle body1SemiBold = TextStyle(
       fontSize: AppFontSize.dp16.sp,letterSpacing: 0.15,
-      fontWeight: FontWeight.w500,height: 24.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
 
   static  TextStyle body2 = TextStyle(
-      fontSize: AppFontSize.dp14.sp,letterSpacing: 0.15,
-      fontWeight: FontWeight.w400,height: 20.sp,
+      fontSize: AppFontSize.dp14.sp,letterSpacing: 0.15,   //Subtitle
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle body2SemiBold = TextStyle(
       fontSize: AppFontSize.dp14.sp,letterSpacing: 0.15,
-      fontWeight: FontWeight.w500,height: 109.72.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle subtitle1 = TextStyle(
       fontSize: AppFontSize.dp16.sp,letterSpacing: 0,
-      fontWeight: FontWeight.w400,height: 24.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle subtitle2 = TextStyle(
       fontSize: AppFontSize.dp14.sp,letterSpacing: 0,
-      fontWeight: FontWeight.w500,height: 21.98.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle overLine = TextStyle(
       fontSize: AppFontSize.dp12.sp,letterSpacing: 1,
-      fontWeight: FontWeight.w400,height: 31.9.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle caption = TextStyle(
       fontSize: AppFontSize.dp12.sp,letterSpacing: 0.4,
-      fontWeight: FontWeight.w400,height: 19.9.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle toast = TextStyle(
       fontSize: AppFontSize.dp16.sp,letterSpacing: 0.14,
-      fontWeight: FontWeight.w400,height: 21.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
 
 //components
   static  TextStyle buttonLarge = TextStyle(
       fontSize: AppFontSize.dp15.sp,letterSpacing: 0.46,
-      fontWeight: FontWeight.w500,height: 26.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
 
   static  TextStyle buttonMedium = TextStyle(
       fontSize: AppFontSize.dp14.sp,letterSpacing: 0.4,
-      fontWeight: FontWeight.w500,height: 24.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle buttonMediumCapital = TextStyle(
       fontSize: AppFontSize.dp14.sp,letterSpacing: 0.4,
-      fontWeight: FontWeight.w500,height: 24.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle buttonSmall = TextStyle(
       fontSize: AppFontSize.dp13.sp,letterSpacing: 0.46,
-      fontWeight: FontWeight.w500,height: 22.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle inputLabel = TextStyle(
       fontSize: AppFontSize.dp12.sp,letterSpacing: 0.15,
-      fontWeight: FontWeight.w400,height: 12.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle helperText = TextStyle(
       fontSize: AppFontSize.dp12.sp,letterSpacing: 0.4,
-      fontWeight: FontWeight.w400,height: 20.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle inputText = TextStyle(
       fontSize: AppFontSize.dp16.sp,letterSpacing: 0.15,
-      fontWeight: FontWeight.w400,height: 24.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle avatarInitials = TextStyle(
       fontSize: AppFontSize.dp18.sp,letterSpacing: 0.14,
-      fontWeight: FontWeight.w400,height: 26.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle chip = TextStyle(
       fontSize: AppFontSize.dp13.sp,letterSpacing: 0.16,
-      fontWeight: FontWeight.w400,height: 18.sp,
+      fontWeight: FontWeight.w400,
       color: AppColor.textOnPrimary
   );
   static  TextStyle toolTip = TextStyle(
       fontSize: AppFontSize.dp11.sp,letterSpacing: 0,
-      fontWeight: FontWeight.w500,height: 16.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle alertTitle = TextStyle(
       fontSize: AppFontSize.dp16.sp,letterSpacing: 0.15,
-      fontWeight: FontWeight.w500,height: 24.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle tableHeader = TextStyle(
       fontSize: AppFontSize.dp12.sp,letterSpacing: 0.17,
-      fontWeight: FontWeight.w500,height: 24.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
   static  TextStyle badgeLabel = TextStyle(
       fontSize: AppFontSize.dp12.sp,letterSpacing: 0.14,
-      fontWeight: FontWeight.w500,height: 20.sp,
+      fontWeight: FontWeight.w500,
       color: AppColor.textOnPrimary
   );
 

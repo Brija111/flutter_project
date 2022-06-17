@@ -1,17 +1,26 @@
 
+import 'package:asset_management/view/forgot_password/forgot_password_page.dart';
+import 'package:asset_management/view/login/login_page.dart';
 import 'package:asset_management/view/main/main_page.dart';
+import 'package:asset_management/view/no_network/no_network_page.dart';
+import 'package:asset_management/view/register/register_page.dart';
+import 'package:asset_management/view/splash_page/splash.dart';
+import 'package:asset_management/view/verification/verification_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 
-const String initialRoute = "login";
+//const String initialRoute = "/register";
 
 class Routes {
   static const String splash = "/";
-  static const String dashboard = "/dashboard";
+  //static const String dashboard = "/dashboard";
   static const String no_network = "/no_network";
   static const String login = "/login";
-  static const String main = "/main";
+  static const String main = "/main";//  main_page used as Dashboard
+  static const String register= "/register";//Register Page
+  static const String verification="/verification";//Verification Page
+static const String forgot_pwd="/forgot_pwd";
 
 
 
@@ -23,26 +32,52 @@ class AppRouter {
   static Route<dynamic> generateRoute(RouteSettings settings) {
 
     switch (settings.name) {
-    //
-    // case Routes.splash:
-    //   return CupertinoPageRoute(
-    //     builder: (_) => SplashPage(),
-    //     settings: RouteSettings(name: settings.name),
-    //   );
-    //
-    //   case Routes.no_network:
-    //     return NoTransitionRoute(
-    //       builder: (_) => NoNetWorkPage(),
-    //       settings: RouteSettings(name: settings.name),
-    //     );
-    //
+
+      case Routes.splash:
+       return CupertinoPageRoute(
+         builder: (_) => SplashPage(),
+         settings: RouteSettings(name: settings.name),
+       );
+
+       case Routes.no_network:
+         return NoTransitionRoute(
+           builder: (_) => NoNetWorkPage(),
+           settings: RouteSettings(name: settings.name),
+         );
+
       case Routes.main:
         return MaterialPageRoute(
           builder: (_) => MainPage(),
           settings: RouteSettings(name: settings.name),
         );
 
-      default:
+      case Routes.login:
+        return MaterialPageRoute(
+            builder: (_)=> LogInPage(),
+          settings: RouteSettings(name: settings.name),
+        );
+
+//Register Route and Page
+      case Routes.register:
+        return MaterialPageRoute(
+            builder: (_)=> RegisterPage(),
+          settings: RouteSettings(name: settings.name),
+        );
+
+//Email verification Route and Page
+      case Routes.verification:
+        return MaterialPageRoute(
+            builder:(_)=> VerificationPage(),
+        settings: RouteSettings(name: settings.name),
+        );
+
+//Forgot Password Page
+      case Routes.forgot_pwd:
+        return MaterialPageRoute(
+            builder:(_)=>ForgotPwdPage(),
+        settings: RouteSettings(name: settings.name));
+
+   default:
             return MaterialPageRoute(
                 builder: (_) => Scaffold(
                   body: Center(
@@ -50,6 +85,7 @@ class AppRouter {
                   ),
                 )
             );
+
         }
     }
 

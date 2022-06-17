@@ -13,6 +13,7 @@ class AppColor {
   static  Color primaryOnHoverBackground = Color(0xFF9155FD).withOpacity(0.8);
   static  Color primaryOutline= Color(0xFF9155FD).withOpacity(0.5);
 
+
   // Secondary
   static const Color secondary = Color(0xFF8A8D93);
   static const Color secondaryLight = Color(0xFF9C9FA4);

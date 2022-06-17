@@ -10,6 +10,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 import 'core/res/styles.dart';
 import 'helper/dialog_manager.dart';
+import 'package:responsive_framework/responsive_framework.dart';
 
 Future<Null> main() async {
 
@@ -47,12 +48,12 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         statusBarIconBrightness: Brightness.dark));
 
     return ScreenUtilInit(
-      designSize: Size(360, 640),
+      designSize: Size(1440, 1024),
       builder:(BuildContext context,_)=> MaterialApp(
         title: "",
         theme: AppStyle.appTheme,
         builder: _setupDialogManager,
-        initialRoute:  '/main',
+        initialRoute:"/",
         debugShowCheckedModeBanner: false,
         navigatorKey: navigationService.navigatorKey,
         onGenerateRoute: (settings) => AppRouter.generateRoute(settings),
@@ -62,17 +63,33 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   }
 
   Widget _setupDialogManager(context, widget) {
-    return Navigator(
-      key: locator<DialogService>().dialogNavigationKey,
-      onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) {
-        final MediaQueryData data = MediaQuery.of(context);
-        return DialogManager(
-          child: MediaQuery(
-            data: data.copyWith(textScaleFactor: 1.0),
-            child: widget,
-          ),
-        );
-      }),
+    return ResponsiveWrapper.builder(  //responsive_framework Package implements(ResponsiveWrapper.builder)
+       Navigator(
+        key: locator<DialogService>().dialogNavigationKey,
+        onGenerateRoute: (settings) => MaterialPageRoute(builder: (context) {
+          final MediaQueryData data = MediaQuery.of(context);
+          return DialogManager(
+            child: MediaQuery(
+              data: data.copyWith(textScaleFactor: 1.0),
+              child: widget,
+            ),
+          );
+        }),
+      ),
+
+      //From responsive_framework Package
+      defaultScale: true,//from responsive_framework Package
+      breakpoints: [
+        ResponsiveBreakpoint.resize(480,name: MOBILE),
+        ResponsiveBreakpoint(breakpoint: 550,name:"K"),
+        ResponsiveBreakpoint(breakpoint: 700,name:"2K"),
+        ResponsiveBreakpoint.autoScale(800, name: TABLET),
+        ResponsiveBreakpoint.autoScale(1000, name: TABLET),
+        ResponsiveBreakpoint.resize(1200,name: DESKTOP),
+        ResponsiveBreakpoint.autoScale(2460, name: "4K"),
+
+
+      ],//From resonsive_framework package
     );
   }
 

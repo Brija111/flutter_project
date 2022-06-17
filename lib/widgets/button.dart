@@ -66,9 +66,6 @@ class Button extends StatelessWidget {
 
           if(icon != null ) HorizontalSpacing.custom(value:8.0),
           Text(text, style: textStyle ?? (isOutline ? _outlineTextStyle : _buttonTextStyle), maxLines: 1, overflow: TextOverflow.fade,),
-
-
-
         ],
       ),
     );

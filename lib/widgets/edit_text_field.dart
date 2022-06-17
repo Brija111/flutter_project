@@ -78,6 +78,7 @@ class EditTextField extends StatefulWidget {
         this.placeholder,
         this.prefixIcon,
         this.padding,
+        this.textStyle,
         this.textAlign = TextAlign.left,
         this.textInputAction = TextInputAction.next,
         this.suffixIcon }) {
