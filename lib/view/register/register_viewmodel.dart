@@ -17,16 +17,19 @@ class RegisterViewModel extends VGTSBaseViewModel {
 
   ScrollController regScrollController = ScrollController();
 
-  NameFormFieldController nameController= NameFormFieldController(ValueKey("txtName"), required: true,requiredText: "");
+  NameFormFieldController nameController= NameFormFieldController(ValueKey("txtName"),
+      required: true,requiredText: "Please enter your Name");
 
-  NameFormFieldController orgController=NameFormFieldController(ValueKey("txtOrg"), required: true,requiredText: ""
+  NameFormFieldController orgController=NameFormFieldController(ValueKey("txtOrg"),
+      required: true,requiredText: "Please enter your Organization Name"
   );
 
-  EmailFormFieldController emailController=EmailFormFieldController(ValueKey("txtEmail"), required: true,requiredText: ""
+  EmailFormFieldController emailController=EmailFormFieldController(ValueKey("txtEmail"),
+      required: true,requiredText: "Please enter an Email"
   );
 
   PasswordFormFieldController passwordController= PasswordFormFieldController(ValueKey("txtPassword"),
-      required: true,requiredText: "");
+      required: true,requiredText: "Password field is Required");
 
 
   register() async {

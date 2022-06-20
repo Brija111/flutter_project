@@ -182,7 +182,7 @@ class RegisterPage extends ViewModelBuilderWidget<RegisterViewModel> {
 
                                 Button(
                                   "REGISTER",textStyle: AppTextStyle.buttonLarge.copyWith(fontSize: 14,color: AppColor.white),
-                                  key: const ValueKey("btnContinue"),
+                                  key: const ValueKey("regContinue"),
                                   width: double.infinity,
                                   isLoading: viewModel.state == ViewState.Busy,
                                   onPressed: () {

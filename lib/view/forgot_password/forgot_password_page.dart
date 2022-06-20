@@ -120,7 +120,7 @@ class ForgotPwdPage extends ViewModelBuilderWidget<ForgotPwdViewModel>{
 
                                 Button(
                                   "SUBMIT",textStyle: AppTextStyle.buttonLarge.copyWith(fontSize: 14,color: AppColor.white),
-                                  key: const ValueKey("btnContinue"),
+                                  key: const ValueKey("pwdContinue"),
                                   width: double.infinity,
                                   isLoading: viewModel.state == ViewState.Busy,
                                   onPressed: () {

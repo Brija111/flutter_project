@@ -164,7 +164,7 @@ class LogInPage extends ViewModelBuilderWidget<LogInViewModel>{
 
                                 Button(
                                   "LOGIN",textStyle: AppTextStyle.buttonLarge.copyWith(fontSize: 14,color: AppColor.white),
-                                  key: const ValueKey("btnContinue"),
+                                  key: const ValueKey("loginContinue"),
                                   width: double.infinity,
                                   isLoading: viewModel.state == ViewState.Busy,
                                   onPressed: () {

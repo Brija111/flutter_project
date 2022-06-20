@@ -10,12 +10,9 @@ class ForgotPwdViewModel extends VGTSBaseViewModel {
 
   final GlobalKey<FormState> registerFormKey = GlobalKey<FormState>();
 
-  EmailFormFieldController emailController=EmailFormFieldController(ValueKey("txtLoginEmail"), required: true,requiredText: ""
+  EmailFormFieldController emailController=EmailFormFieldController(ValueKey("txtLoginEmail"),
+      required: true,requiredText: "Please enter your Email"
   );
-
-  PasswordFormFieldController passwordController= PasswordFormFieldController(ValueKey("txtLoginPassword"),
-      required: true,requiredText: "");
-
 
   register() async {
 
