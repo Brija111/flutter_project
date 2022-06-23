@@ -6,7 +6,7 @@ class AuthRequest {
 
   static RequestSettings login(String mobileNumber) {
     return RequestSettings(
-        "/user/otp/${mobileNumber}/",
+        "/user/otp/$mobileNumber/",
         RequestMethod.GET,
         params: null,
         authenticated: false

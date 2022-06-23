@@ -109,7 +109,7 @@ class _CheckedBoxState extends State<CheckedBox> {
 
 
 
-//CheckBoxlistTile
+//CheckBoxlistTile => can tap anywhere on th Checkboxlisttile
 class EditCheckBoxTile extends StatefulWidget {
 
   late Widget title;
